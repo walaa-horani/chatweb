@@ -1,5 +1,5 @@
 const express = require("express");
-const cors = require("cors");
+app.use(cors({ origin: "https://your-netlify-domain.netlify.app" }));
 const { default: axios } = require("axios");
 
 const app = express();
@@ -11,7 +11,7 @@ app.post("/authenticate", async (req, res) => {
     try {
       const r = await axios.put("https://api.chatengine.io/users/", 
         { username: username, secret: username, first_name: username },
-        { headers: { "private-key": "4ba3748d-6ebe-4faf-9283-8440b7a5024f " } }
+        { headers: { "private-key": "4ba3748d-6ebe-4faf-9283-8440b7a5024f" } }
       );
       return res.status(r.status).json(r.data);
     } catch (e) {
