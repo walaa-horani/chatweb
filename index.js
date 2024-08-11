@@ -1,5 +1,5 @@
 const express = require("express");
-app.use(cors({ origin: "https://your-netlify-domain.netlify.app" }));
+app.use(cors({ origin: "https://chatwithfriendsonline.netlify.app/" }));
 const { default: axios } = require("axios");
 
 const app = express();
@@ -21,4 +21,4 @@ app.post("/authenticate", async (req, res) => {
   });
   
 
-app.listen(3001);
+app.listen("https://chatwithfriendsonline.netlify.app/");
