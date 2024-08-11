@@ -6,7 +6,7 @@ const app = express();
 
 // Middleware configuration
 app.use(express.json());
-app.use(cors({ origin: "https://chatwithfriendsonline.netlify.app" }));
+app.use(cors({ origin: "https://chatwithfriendsonline.netlify.app/" }));
 
 app.post("/authenticate", async (req, res) => {
   const { username } = req.body;
